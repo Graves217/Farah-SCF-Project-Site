@@ -149,10 +149,70 @@ section h2 {
     border-bottom: 2px solid var(--border-color);
 }
 
-/* Skills Section Two-Column Layout */
+/* Three-Column Resume Layout */
+.resume-columns {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.resume-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-column.left {
+    flex: 1.2;
+}
+
+.resume-column.middle {
+    flex: 1;
+}
+
+.resume-column.right {
+    flex: 1;
+}
+
+/* Section Headers with Professional Styling */
+.resume-column h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Skills Section Single-Column Layout in 3-column design */
 #skills ul {
-    column-count: 2;
-    column-gap: 30px;
+    column-count: 1;
+    padding-left: 20px;
+}
+
+/* Education and Awards Sections */
+#education, #certifications, #awards {
+    margin-bottom: 25px;
+}
+
+#education h3, #certifications h3, #awards h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+/* Experience Section Styling */
+#experience h3 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+#experience > div {
+    margin-bottom: 25px;
+}
+
+#experience hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
 }
 
 /* Social Section Styles */
@@ -204,6 +264,22 @@ img {
 }
 
 /* Responsive Design */
+/* Stack resume columns on smaller screens */
+@media (max-width: 1200px) {
+    .resume-columns {
+        flex-direction: column;
+    }
+    
+    .resume-column {
+        width: 100%;
+    }
+    
+    #skills ul {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     #wrapper {
         margin: 10px;
@@ -217,5 +293,9 @@ img {
     nav a {
         margin: 0 10px;
         font-size: 14px;
+    }
+    
+    #skills ul {
+        column-count: 1;
     }
 }
