@@ -1,3 +1,13 @@
+/* Professional Color Scheme */
+:root {
+    --primary-color: #002147;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #0066cc;
+    --border-color: #002147;
+    --background-color: #f5f5f5;
+}
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -7,55 +17,199 @@
 
 /* Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-/* Home Page Styles */
-.home-header {
-    background: #005f73;
-    color: #fff;
+/* Wrapper Styles */
+#wrapper {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border-color);
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-bottom: 2px solid var(--border-color);
     text-align: center;
 }
 
-.home-header h1 {
-    font-size: 2.5em;
-}
-
-/* Resume Layout Styles */
-.resume {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.resume .section {
-    margin-bottom: 20px;
-}
-
-.resume h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-/* Links */
-a {
-    color: #ffdd00;
+nav a {
+    color: var(--primary-color);
     text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-a:hover {
+nav a:hover {
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
-/* Pseudo-elements */
-.home-header::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: #ffdd00;
+/* Main Content Styles */
+main {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    color: var(--text-color);
+}
+
+main p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+main ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+main li {
+    color: var(--text-color);
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin: 15px 0 10px 0;
+}
+h2 {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    font-size: 22px;
+}
+h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* Resume Specific Styles */
+.resume-container {
+    background-color: var(--secondary-color);
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+}
+
+.resume-header h1 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin: 0;
+}
+
+.contact-info {
+    color: #666;
+    font-size: 13px;
+    background-color: var(--secondary-color);
+}
+
+.resume-left, .resume-right, .resume-full {
+    background-color: var(--secondary-color);
+}
+
+/* Section Styles */
+section {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Social Section Styles */
+#social {
+    background-color: #f0f0f0;
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 15px;
+    border-top: 3px solid var(--accent-color);
+    font-size: 14px;
+}
+
+/* Link Styles */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Highlight Styles */
+.highlight {
+    background-color: #ffffcc;
+    padding: 2px 4px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #wrapper {
+        margin: 10px;
+        padding: 5px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
 }
