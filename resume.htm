@@ -3,40 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="farah-scf.css">
-    <title>Resume</title>
-    <style>
-        .container { display: flex; }
-        .column { flex: 50%; padding: 10px; }
-        header, footer { text-align: center; padding: 10px; }
-        nav { margin: 10px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Anthony J. Farah's Resume</title>
 </head>
 <body>
     <header>
-        <h1>Farah SCF</h1>
+        <h1>Anthony J. Farah</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-    </nav>
-    <div class="container">
-        <div class="column">
-            <h2>Education and Employment</h2>
-            <p><strong>Bachelor of Science in Computer Science</strong><br />
-            University of XYZ, 2024</p>
-            <p><strong>Software Engineer</strong><br />
-            Tech Company ABC, 2024-Present</p>
+    <main>
+        <div class="container">
+            <div class="left-column">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Skill #1</li>
+                    <li>Skill #2</li>
+                    <li>Skill #3</li>
+                    <li>Skill #4</li>
+                </ul>
+                <h2>Education</h2>
+                <p>Degree, Major - University Name, Year</p>
+                <p>Additional education or certifications can go here.</p>
+            </div>
+            <div class="right-column">
+                <h2>Work Experience</h2>
+                <h3>Job Title - Company Name</h3>
+                <p>Responsibilities and accomplishments.</p>
+                <h3>Job Title - Company Name</h3>
+                <p>Responsibilities and accomplishments.</p>
+            </div>
         </div>
-        <div class="column">
+        <div class="full-width-section">
             <h2>Certifications</h2>
-            <p>Certified Java Developer</p>
-            <p>Certified AWS Solutions Architect</p>
-            <h2>References</h2>
-            <p>Available upon request.</p>
+            <p>Certification details here.</p>
         </div>
-    </div>
+        <div class="full-width-section">
+            <h2>References</h2>
+            <p>Reference details here.</p>
+        </div>
+        <div class="full-width-section">
+            <h2>Awards</h2>
+            <p>Award details here.</p>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2026 Farah SCF</p>
+        <p>&copy; 2026 Anthony J. Farah</p>
     </footer>
 </body>
 </html>
