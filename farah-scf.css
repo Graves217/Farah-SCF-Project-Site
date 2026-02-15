@@ -149,6 +149,12 @@ section h2 {
     border-bottom: 2px solid var(--border-color);
 }
 
+/* Skills Section Two-Column Layout */
+#skills ul {
+    column-count: 2;
+    column-gap: 30px;
+}
+
 /* Social Section Styles */
 #social {
     background-color: #f0f0f0;
