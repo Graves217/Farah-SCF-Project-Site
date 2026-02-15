@@ -1,194 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Farah's professional IT portfolio website">
-        <title>Farah's Portfolio Home Page</title>
-
-        <!-- INTERNAL STYLESHEET -->
-        <style type="text/css">
-
-            /* TYPE SELECTORS */
-            body {
-                width: 1000px;
-                margin: auto;
-                background-color: lightgray;
-                font-family: "Times New Roman", Times, serif;
-            }
-
-            h1 {
-                text-align: center;
-                color: white;
-                font-size: 48px;
-                margin: 0;
-            }
-
-            h2 {
-                color: #002147;
-            }
-
-            header {
-                height: 250px;
-                background-image: url('images/banner.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            p {
-                font-size: 16px;
-                color: black;
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            nav {
-                text-align: center;
-                padding: 12px;
-                background-color: #e0e0e0;
-            }
-
-            footer {
-                color: white;
-                background-color: #002147;
-                text-align: center;
-                padding: 15px;
-            }
-
-            /* ID SELECTORS */
-            #wrapper {
-                background-color: #ffffff;
-                border: 2px solid #002147;
-                padding: 10px;
-            }
-
-            #social {
-                background-color: #f0f0f0;
-                border: 2px solid #002147;
-                padding: 10px;
-                margin-top: 20px;
-                text-align: center;
-            }
-
-            /* CLASS SELECTORS */
-            .highlight {
-                font-weight: bold;
-            }
-
-        </style>
-    </head>
-
-    <body style="background-image:url(images/bg.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size:cover; background-position:center;">
-
-        <div id="wrapper"> <!-- open wrapper -->
-
-            <header>
-                <h1>Welcome to My Portfolio</h1>
-            </header>
-
-            <nav>
-                <!-- LOCAL RESUME LINK -->
-                <a href="resume.htm" style="margin:0 15px; color:#002147;"><b>Resume</b></a>
-
-                <!-- INTERNAL PAGE LINKS -->
-                <a href="#about" style="margin:0 15px; color:#002147;"><b>About Me</b></a>
-                <a href="#goals" style="margin:0 15px; color:#002147;"><b>Career Goals</b></a>
-
-                <!-- EXTERNAL LINKS -->
-                <a href="https://www.linkedin.com/in/anthony-farah-a54164153/" style="margin:0 15px; color:#002147;"><b>LinkedIn</b></a>
-                <a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-fallback" style="margin:0 15px; color:#002147;"><b>Indeed</b></a>
-            </nav>
-
-            <main style="padding:30px;">
-
-                <hr>
-
-                <section id="about">
-
-                    <h2>About Me</h2>
-
-                    <!-- PROFILE IMAGE -->
-                    <img src="images/profile.jpg"
-                         alt="Photo of Farah"
-                         style="float:right; margin:10px; width:180px; border-radius:8px;">
-
-                    <p>
-                        My name is <b>Anthony J Farah</b>, and I am currently studying Information Technology at
-                        <i>State College of Florida</i>. This website began as a class project, but I am
-                        developing it into a professional portfolio that reflects my academic progress and
-                        long‑term career goals.<br><br>
-
-                        I am focusing on
-                        <span class="highlight">programming, networking, and cybersecurity</span>,
-                        and I am committed to building a strong foundation that will support a future career
-                        in the IT field.
-                    </p>
-
-                </section>
-
-                <hr>
-
-                <section id="goals">
-
-                    <h2>Career Goals</h2>
-
-                    <p>
-                        Over the next few weeks, this site will expand to include my <b>Resume</b>,
-                        <b>Portfolio</b>, <b>Newsletter</b>, and <b>Contact</b> pages. Each section will
-                        highlight my skills, projects, and professional development.<br><br>
-
-                        My long‑term goal is to build a resilient IT career that integrates
-                        <span class="highlight">automation, networking, and strong communication skills</span>.
-                        I am motivated by the opportunity to contribute to meaningful projects and
-                        continuously grow as technology evolves.
-                    </p>
-
-                </section>
-
-                <hr>
-
-                <section id="contact">
-
-                    <p>
-                        <a href="https://www.linkedin.com/in/anthony-farah-a54164153/">
-                            <img src="images/linkedin.png" alt="LinkedIn Profile" style="border:0px; float:right; margin:10px; width: 50px;">
-                        </a>
-                        Contact Me:<br>
-                        Email: <a href="mailto:anthony.j.farah@example.com">anthony.j.farah@example.com</a><br>
-                        Phone: <a href="tel:+1234567890">+1 (941) 555-2178</a><br>
-
-                        <!-- EXTERNAL LINKS -->
-                        LinkedIn:
-                        <a href="https://www.linkedin.com/in/anthony-farah-a54164153/">Visit My Profile</a><br>
-                        Indeed:
-                        <a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-fallback">View My Indeed Profile</a><br>
-
-                        <!-- LOCAL RESUME LINK -->
-                        Resume:
-                        <a href="resume.htm">Resume Page (Coming Soon)</a>
-                    </p>
-
-                </section>
-
-            </main>
-
-            <div id="social"> <!-- open social -->
-                Facebook | Twitter | YouTube
-            </div> <!-- close social -->
-
-            <footer>
-                &copy; 2026 Farah | Professional Portfolio | farah-scf-project.com
-            </footer>
-
-        </div> <!-- close wrapper -->
-
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="farah-scf.css">
+    <title>Farah SCF Project Site</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Existing home page content goes here -->
+    </main>
+</body>
 </html>
