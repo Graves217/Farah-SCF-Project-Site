@@ -209,6 +209,19 @@ section h2 {
     border-top: 1px solid #ddd;
 }
 
+/* Abbreviation Styles */
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+    color: var(--accent-color);
+}
+
+.certification-note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+}
+
 /* Social Section Styles */
 #social {
     background-color: #f0f0f0;
