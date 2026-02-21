@@ -17,23 +17,14 @@
             </header>
 
             <nav>
-                <!-- HOME LINK -->
-                <a href="index.html" style="margin:0 15px; color:#002147;"><b>Home</b></a>
-
-                <!-- RESUME LINK -->
-                <a href="resume.htm" style="margin:0 15px; color:#002147;"><b>Resume</b></a>
-
-                <!-- PORTFOLIO LINK -->
-                <a href="portfolio.htm" style="margin:0 15px; color:#002147;"><b>Portfolio</b></a>
-
-                <!-- NEWSLETTER LINK -->
-                <a href="newsletter.htm" style="margin:0 15px; color:#002147;"><b>Newsletter</b></a>
-
-                <!-- CONTACT LINK -->
-                <a href="contact.htm" style="margin:0 15px; color:#002147;"><b>Contact</b></a>
-
-                <!-- TRANSCRIPT LINK -->
-                <a href="transcript.htm" style="margin:0 15px; color:#002147;"><b>Transcript</b></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.htm">Resume</a></li>
+                    <li><a href="portfolio.htm">Portfolio</a></li>
+                    <li><a href="newsletter.htm">Newsletter</a></li>
+                    <li><a href="contact.htm">Contact</a></li>
+                    <li><a href="transcript.htm">Transcript</a></li>
+                </ul>
             </nav>
 
             <main>
@@ -116,18 +107,37 @@
                         </table>
 
                         <h3>Courses in Progress</h3>
-                        <ul>
-                            <li>CGS 2820 &ndash; Web Page Development</li>
-                            <li>CET 1600 &ndash; Networking Fundamentals</li>
-                            <li>CIS 2931 &ndash; Current Issues In Computing</li>
-                            <li>COP 2510 &ndash; Programming Concepts</li>
+                        <ul class="course-list">
+                            <li>Spring 2026 &ndash; CGS 2820 Web Page Development &ndash; In Progress</li>
+                            <li>Spring 2026 &ndash; CET 1600 Networking Fundamentals &ndash; In Progress</li>
+                            <li>Spring 2026 &ndash; CIS 2931 Current Issues In Computing &ndash; In Progress</li>
+                            <li>Spring 2026 &ndash; COP 2510 Programming Concepts &ndash; In Progress</li>
                         </ul>
 
                         <h3>Completed Courses</h3>
-                        <ul>
-                            <li>CGS 1570 &ndash; Integrated Business Apps Software (A)</li>
-                            <li>CGS 1000 &ndash; Computer Information Systems (A)</li>
+                        <ul class="course-list">
+                            <li>Fall 2025 &ndash; CGS 1570 Integrated Business Apps Software &ndash; <b>A</b></li>
+                            <li>Fall 2024 &ndash; CGS 1000 Computer Information Systems &ndash; <b>A</b></li>
                         </ul>
+
+                        <h3>Professors &ndash; Letters of Recommendation</h3>
+                        <p><small>The following professors have agreed to provide letters of recommendation:</small></p>
+                        <ul class="recommend-list">
+                            <li>Prof. Jane Smith &ndash; CGS 2820 Web Page Development</li>
+                            <li>Prof. John Doe &ndash; CGS 1570 Integrated Business Apps Software</li>
+                        </ul>
+
+                        <h3>Certifications</h3>
+                        <dl class="cert-dl">
+                            <dt>CompTIA Security<sup>+</sup></dt>
+                            <dd>Expected completion: <span class="special">&mdash;</span> May 2026</dd>
+                            <dt>CompTIA A<sup>+</sup></dt>
+                            <dd>Expected completion: May 2026</dd>
+                            <dt>CompTIA Network<sup>+</sup></dt>
+                            <dd>Expected completion: May 2026</dd>
+                            <dt>Microsoft Office Suite</dt>
+                            <dd>Status: Certified &mdash; version 365<sub>Enterprise</sub></dd>
+                        </dl>
 
                     </section>
 
@@ -138,9 +148,11 @@
 
                         <p>References are available upon request. The following individuals have agreed to speak to my professional capabilities and character.</p>
 
-                        <ol class="references-list">
+                        <p>Special note: <span class="special">&star;</span> denotes a preferred reference &amp; <span class="special">&check;</span> denotes verified contact.</p>
+
+                        <ol class="references-list references-ordered" start="3">
                             <li class="reference-entry">
-                                <h3>Business Owner / Client</h3>
+                                <h3>Business Owner / Client <span class="special">&star;</span></h3>
                                 <p>
                                     <b>Name:</b> <i>Available upon request</i><br>
                                     <b>Relationship:</b> Long-term consulting client (3+ years)<br>
@@ -148,7 +160,7 @@
                                 </p>
                             </li>
                             <li class="reference-entry">
-                                <h3>District Manager</h3>
+                                <h3>District Manager <span class="special">&check;</span></h3>
                                 <p>
                                     <b>Name:</b> <i>Available upon request</i><br>
                                     <b>Relationship:</b> Former supervisor at Home Depot<br>
@@ -167,7 +179,7 @@
 
                     </section>
 
-                </div>
+                </div> <!-- close transcript-layout -->
 
             </main>
 
