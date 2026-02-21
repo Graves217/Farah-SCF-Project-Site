@@ -245,9 +245,28 @@ section h2 {
     font-weight: bold;
 }
 
+/* Transcript Two-Column Layout */
+.transcript-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.transcript-col {
+    flex: 2;
+    min-width: 0;
+}
+
+.references-col {
+    flex: 1;
+    min-width: 0;
+}
+
 /* References Styles */
 .references-list {
     margin-top: 15px;
+    padding-left: 20px;
 }
 
 .reference-entry {
@@ -352,5 +371,9 @@ img {
     
     #skills ul {
         column-count: 1;
+    }
+
+    .transcript-layout {
+        flex-direction: column;
     }
 }
