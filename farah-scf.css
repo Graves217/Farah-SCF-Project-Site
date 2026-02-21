@@ -209,7 +209,55 @@ section h2 {
     border-top: 1px solid #ddd;
 }
 
-/* Abbreviation Styles */
+/* Transcript Table Styles */
+.transcript-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.transcript-table caption {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.transcript-table th,
+.transcript-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.transcript-table thead th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.transcript-table tbody tr:nth-child(even) {
+    background-color: #f0f4fa;
+}
+
+.transcript-table tfoot td {
+    background-color: #e8edf5;
+    font-weight: bold;
+}
+
+/* References Styles */
+.references-list {
+    margin-top: 15px;
+}
+
+.reference-entry {
+    margin: 15px 0;
+    padding: 10px 0;
+}
+
+.reference-entry h3 {
+    margin-bottom: 8px;
+}
 abbr {
     text-decoration: underline dotted;
     cursor: help;
