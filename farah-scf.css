@@ -21,6 +21,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Wrapper Styles */
@@ -84,6 +89,11 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+nav ul li a.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
 @media (min-width: 640px) {
     nav ul {
         flex-direction: row;
@@ -94,7 +104,7 @@ nav ul li a:hover {
 /* Main Content Styles */
 main {
     background-color: var(--secondary-color);
-    padding: 20px;
+    padding: 30px;
     color: var(--text-color);
 }
 
@@ -395,6 +405,25 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+}
+
+/* Portfolio Figure Grid Styles */
+#figureContainer {
+    text-align: center;
+}
+
+#figureContainer figure {
+    display: inline-block;
+    width: 480px;
+    max-width: 100%;
+    margin: 12px;
+    vertical-align: top;
+}
+
+#figureContainer figcaption {
+    margin-top: 8px;
+    color: var(--text-color);
+    font-style: italic;
 }
 
 /* Responsive Design */
