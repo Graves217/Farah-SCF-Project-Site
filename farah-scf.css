@@ -417,11 +417,15 @@ img {
 
 #figureContainer figure {
     flex: 0 1 320px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #figureContainer img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
 }
 
 #figureContainer figcaption {
@@ -476,5 +480,9 @@ img {
 
     .transcript-layout {
         flex-direction: column;
+    }
+
+    #figureContainer figure {
+        flex: 1 1 100%;
     }
 }
