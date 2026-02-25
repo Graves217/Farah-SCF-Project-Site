@@ -409,15 +409,19 @@ img {
 
 /* Portfolio Figure Grid Styles */
 #figureContainer {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 #figureContainer figure {
-    display: inline-block;
-    width: 480px;
+    flex: 0 1 320px;
+}
+
+#figureContainer img {
     max-width: 100%;
-    margin: 12px;
-    vertical-align: top;
+    height: auto;
 }
 
 #figureContainer figcaption {
