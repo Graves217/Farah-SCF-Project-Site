@@ -426,6 +426,19 @@ img {
     font-style: italic;
 }
 
+/* Specs List Styles */
+.specs-list {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+    margin: 10px auto 0 auto;
+    max-width: 440px;
+    font-style: normal;
+    color: var(--text-color);
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 /* Stack resume columns on smaller screens */
 @media (max-width: 1200px) {
