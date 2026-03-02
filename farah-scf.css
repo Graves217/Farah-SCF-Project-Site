@@ -153,10 +153,12 @@ h3 {
     background-color: var(--secondary-color);
 }
 
-.resume-header h1 {
+.resume-header h2 {
     color: var(--primary-color);
     font-size: 32px;
     margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .contact-info {
