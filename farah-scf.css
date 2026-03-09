@@ -135,10 +135,17 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
     margin: 15px 0 10px 0;
 }
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 0.03em;
+}
 h2 {
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 8px;
-    font-size: 22px;
+    font-size: 1.4em;
+    color: var(--accent-color);
 }
 h3 {
     color: var(--primary-color);
