@@ -40,8 +40,11 @@ body {
 /* Header Styles */
 header {
     background-color: var(--primary-color);
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center top;
     color: var(--secondary-color);
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     border-bottom: 3px solid var(--accent-color);
 }
@@ -50,6 +53,7 @@ header h1 {
     font-size: 2.5em;
     margin: 0;
     color: var(--secondary-color);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Navigation Styles */
@@ -89,7 +93,8 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-nav ul li a.active {
+nav ul li a.active,
+nav ul li a.selected {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
@@ -487,4 +492,104 @@ img {
     #figureContainer figure {
         flex: 1 1 100%;
     }
+}
+
+/* ========================================================
+   Profile & LinkedIn Icon Classes (replaces inline styles)
+   ======================================================== */
+.profile-img {
+    float: right;
+    margin: 10px;
+    width: 180px;
+    border-radius: 8px;
+}
+
+.linkedin-icon {
+    border: 0;
+    float: right;
+    margin: 10px;
+    width: 50px;
+}
+
+/* ========================================================
+   Newsletter Styles
+   ======================================================== */
+
+/* Full-justify paragraphs in main content */
+main p {
+    text-align: justify;
+}
+
+/* Newsletter meta line (date / byline) */
+.newsletter-meta {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 6px;
+}
+
+/* Styled HR for newsletter */
+hr.newsletter-divider {
+    border: none;
+    border-top: 4px solid var(--accent-color);
+    width: 80%;
+    margin: 18px auto;
+    border-radius: 4px;
+}
+
+/* Infobar: inverse-color announcement banner */
+.infobar {
+    background: linear-gradient(90deg, var(--primary-color) 0%, #004080 100%);
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.05em;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+/* .box callout area */
+.box {
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    background-color: #f0f6ff;
+    box-shadow: 3px 3px 8px rgba(0, 33, 71, 0.15);
+}
+
+.box h3 {
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+/* Blockquote styles */
+blockquote {
+    border-left: 5px solid var(--accent-color);
+    margin: 20px 0;
+    padding: 14px 20px;
+    background-color: #f7f9fc;
+    font-style: italic;
+    color: var(--primary-color);
+    text-align: justify;
+    border-radius: 0 4px 4px 0;
+}
+
+blockquote:first-letter {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: var(--accent-color);
+    float: left;
+    line-height: 0.75;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+
+/* Newsletter image-bullet list */
+.newsletter-list {
+    list-style-image: url(images/recommend-bullet.png);
+    padding-left: 28px;
+    margin: 14px 0;
+    line-height: 1.8;
 }
