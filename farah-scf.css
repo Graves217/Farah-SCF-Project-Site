@@ -328,6 +328,12 @@ abbr {
     margin-top: 8px;
 }
 
+/* Resume footnote link */
+.resume-footnote {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Special Characters Style */
 .special {
     color: purple;
