@@ -295,8 +295,10 @@ section h2 {
 }
 
 .contact-table input[type="text"],
+.contact-table select,
 .contact-table textarea,
 #contact table input[type="text"],
+#contact table select,
 #contact table textarea {
     font-family: inherit;
     font-size: 0.95em;
