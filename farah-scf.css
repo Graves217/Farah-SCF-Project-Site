@@ -255,6 +255,56 @@ section h2 {
     border-top: 1px solid #ddd;
 }
 
+/* Required Field Marker */
+.required {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* Contact Table Styles */
+.contact-table,
+#contact table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid var(--border-color);
+}
+
+.contact-table th,
+#contact table th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 1.05em;
+    letter-spacing: 0.02em;
+}
+
+.contact-table td,
+#contact table td {
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    vertical-align: middle;
+}
+
+.contact-table tr:nth-child(even) td,
+#contact table tr:nth-child(even) td {
+    background-color: #f0f4fa;
+}
+
+.contact-table input[type="text"],
+.contact-table textarea,
+#contact table input[type="text"],
+#contact table textarea {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 4px 6px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
 /* Transcript Table Styles */
 .transcript-table {
     width: 100%;
