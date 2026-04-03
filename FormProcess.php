@@ -106,16 +106,25 @@ $message = implode("\n", $message_lines);
 
 // ── Build email headers (header-injection safe) ───────────────────────────────
 $from_name    = trim("{$Prefix} {$FirstName} {$LastName}");
-$reply_to     = $Email;
+// Re-validate the sanitized email to ensure it is safe for header use
+$safe_email   = filter_var($_POST['Email'] ?? '', FILTER_VALIDATE_EMAIL)
+                    ? filter_var($_POST['Email'], FILTER_SANITIZE_EMAIL)
+                    : 'noreply@example.com';
+$reply_to     = $safe_email;
 $subject      = "{$subject_prefix}: {$FirstName} {$LastName}";
 
-$headers  = "From: {$from_name} <{$Email}>\r\n";
+$headers  = "From: {$from_name} <{$safe_email}>\r\n";
 $headers .= "Reply-To: {$reply_to}\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 // ── Send the email ────────────────────────────────────────────────────────────
-mail($recipient_email, $subject, $message, $headers);
+$mail_sent = mail($recipient_email, $subject, $message, $headers);
+
+if (!$mail_sent) {
+    // Log the failure to PHP's error log so the server admin can investigate.
+    error_log("FormProcess.php: mail() failed for submission from {$safe_email}");
+}
 
 // ── Redirect to confirmation page ────────────────────────────────────────────
 header('Location: contactSent.htm');
