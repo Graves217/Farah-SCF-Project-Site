@@ -58,7 +58,7 @@ $Zip              = sanitize_field($_POST['Zip']              ?? '');
 $Email            = sanitize_header($_POST['Email']           ?? '');
 $Phone            = sanitize_header($_POST['Phone']           ?? '');
 $PreferredMethod  = sanitize_field($_POST['PreferredMethod']  ?? '');
-$Agree            = sanitize_field($_POST['Agree']            ?? 'no');
+$Agreement        = sanitize_field($_POST['Agreement']        ?? '');
 $Comments         = sanitize_field($_POST['Comments']         ?? '');
 
 // ── Basic server-side validation ─────────────────────────────────────────────
@@ -78,6 +78,9 @@ if ($Comments === '') {
 }
 if ($Zip !== '' && !preg_match('/^[0-9]{5}$/', $Zip)) {
     $errors[] = 'Zip Code must be exactly 5 digits.';
+}
+if ($Agreement !== 'yes') {
+    $errors[] = 'You must agree to be contacted before submitting.';
 }
 
 if (!empty($errors)) {
@@ -103,7 +106,7 @@ $message_lines = [
     "Email             : {$Email}",
     "Phone             : {$Phone}",
     "Preferred Method  : {$PreferredMethod}",
-    "Agreed to Contact : {$Agree}",
+    "Agreed to Contact : {$Agreement}",
     str_repeat('-', 40),
     "Comments:",
     $Comments,
