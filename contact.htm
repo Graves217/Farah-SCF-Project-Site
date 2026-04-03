@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Anthony J Farah - Contact Information">
+        <meta name="author" content="Anthony Farah">
+        <meta name="description" content="Contact Anthony J Farah via the online contact form to ask questions, request information, or connect professionally.">
         <title>Contact - Anthony J Farah</title>
         <link href="farah-scf.css" rel="stylesheet" type="text/css">
     </head>
@@ -44,7 +45,10 @@
                     </p>
 
                     <!-- CONTACT FORM TABLE -->
-                    <form action="#" method="post">
+                    <!-- NOTE: FormProcess.php requires a PHP-capable server to send email.
+                         GitHub Pages does not execute PHP. Upload to a PHP host to test
+                         the email functionality and screenshot the confirmation for submission. -->
+                    <form action="FormProcess.php" method="post">
                     <table class="contact-table">
                         <!-- Row 1: Table Header -->
                         <tr>
@@ -53,13 +57,13 @@
                         <!-- Row 2: Nature of Contact -->
                         <tr>
                             <td style="text-align:right"><span class="required">*</span> Nature of Contact:</td>
-                            <td><textarea name="nature_of_contact" rows="2" cols="35" required></textarea></td>
+                            <td><textarea name="NatureOfContact" rows="2" cols="35" required></textarea></td>
                         </tr>
                         <!-- Row 3: Prefix -->
                         <tr>
                             <td style="text-align:right">Prefix:</td>
                             <td>
-                                <select name="prefix">
+                                <select name="Prefix">
                                     <option value="">-- Select --</option>
                                     <option value="Mr.">Mr.</option>
                                     <option value="Dr.">Dr.</option>
@@ -71,28 +75,28 @@
                         <!-- Row 4: First Name (required) -->
                         <tr>
                             <td style="text-align:right"><span class="required">*</span> First Name:</td>
-                            <td><input type="text" name="first_name" size="30" required></td>
+                            <td><input type="text" name="FirstName" size="30" required></td>
                         </tr>
                         <!-- Row 5: Last Name (required) -->
                         <tr>
                             <td style="text-align:right"><span class="required">*</span> Last Name:</td>
-                            <td><input type="text" name="last_name" size="30" required></td>
+                            <td><input type="text" name="LastName" size="30" required></td>
                         </tr>
                         <!-- Row 6: Street Address -->
                         <tr>
                             <td style="text-align:right">Street Address:</td>
-                            <td><input type="text" name="street_address" size="30"></td>
+                            <td><input type="text" name="StreetAddress" size="30"></td>
                         </tr>
                         <!-- Row 7: City -->
                         <tr>
                             <td style="text-align:right">City:</td>
-                            <td><input type="text" name="city" size="30"></td>
+                            <td><input type="text" name="City" size="30"></td>
                         </tr>
-                        <!-- Row 8: ST dropdown -->
+                        <!-- Row 8: State dropdown (defaults to FL) -->
                         <tr>
                             <td style="text-align:right">State:</td>
                             <td>
-                                <select name="state">
+                                <select name="State">
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -147,36 +151,41 @@
                                 </select>
                             </td>
                         </tr>
-                        <!-- Row 9: Zip -->
+                        <!-- Row 9: Zip (5-digit pattern) -->
                         <tr>
                             <td style="text-align:right">Zip Code:</td>
-                            <td><input type="text" name="zip" size="10"></td>
+                            <td><input type="text" name="Zip" size="10" pattern="[0-9]{5}" title="Five digit zip code"></td>
                         </tr>
                         <!-- Row 10: Email (required) -->
                         <tr>
                             <td style="text-align:right"><span class="required">*</span> Email:</td>
-                            <td><input type="email" name="email" size="35" required></td>
+                            <td><input type="email" name="Email" size="35" required></td>
                         </tr>
-                        <!-- Row 11: Number -->
+                        <!-- Row 11: Phone Number -->
                         <tr>
                             <td style="text-align:right"><span class="required">*</span> Phone Number:</td>
-                            <td><input type="text" name="number" size="30" required></td>
+                            <td><input type="text" name="Phone" size="30" required></td>
                         </tr>
-                        <!-- Row 12: Preferred Method -->
+                        <!-- Row 12: Preferred Contact Method (radio group; same name, different id) -->
                         <tr>
                             <td style="text-align:right"><span class="required">*</span> Preferred Contact Method:</td>
                             <td>
-                                <input type="radio" name="preferred_method" value="Email" required> Email &nbsp;
-                                <input type="radio" name="preferred_method" value="Call"> Call &nbsp;
-                                <input type="radio" name="preferred_method" value="Text"> Text
+                                <input type="radio" name="PreferredMethod" id="method-email" value="Email" required> <label for="method-email">Email</label> &nbsp;
+                                <input type="radio" name="PreferredMethod" id="method-call" value="Call"> <label for="method-call">Call</label> &nbsp;
+                                <input type="radio" name="PreferredMethod" id="method-text" value="Text"> <label for="method-text">Text</label>
                             </td>
                         </tr>
-                        <!-- Row 13: Comments -->
+                        <!-- Row 13: Agreement checkbox -->
                         <tr>
-                            <td style="text-align:right">Additional Comments:</td>
-                            <td><textarea name="comments" rows="4" cols="35"></textarea></td>
+                            <td style="text-align:right">Agreement:</td>
+                            <td><input type="checkbox" name="Agree" id="Agree" value="yes"> <label for="Agree">I agree to be contacted</label></td>
                         </tr>
-                        <!-- Row 14: Buttons -->
+                        <!-- Row 14: Comments (required) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Additional Comments:</td>
+                            <td><textarea name="Comments" rows="4" cols="35" required></textarea></td>
+                        </tr>
+                        <!-- Row 15: Buttons -->
                         <tr>
                             <td colspan="2" style="text-align:center">
                                 <input type="submit" value="Submit"> &nbsp;
