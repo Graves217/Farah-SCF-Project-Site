@@ -10,7 +10,13 @@
  */
 
 // ── Configuration ────────────────────────────────────────────────────────────
-$recipient_email = 'a.farah2178@yahoo.com';   // destination address for form data
+// TO DEPLOY: replace the placeholder values below with real addresses.
+//   $recipient_email – where you want to receive form submissions.
+//   $from_email      – a mailbox on YOUR domain (improves deliverability;
+//                      many hosts reject mail whose From address is not
+//                      on the sending domain).
+$recipient_email = 'YOUR_EMAIL_HERE@example.com';  // ← CHANGE to your email
+$from_email      = 'no-reply@yourdomain.com';      // ← CHANGE to an address on your domain
 $subject_prefix  = 'Contact Form Submission'; // email subject prefix
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -113,7 +119,7 @@ $safe_email   = filter_var($_POST['Email'] ?? '', FILTER_VALIDATE_EMAIL)
 $reply_to     = $safe_email;
 $subject      = "{$subject_prefix}: {$FirstName} {$LastName}";
 
-$headers  = "From: {$from_name} <{$safe_email}>\r\n";
+$headers  = "From: {$from_email}\r\n";
 $headers .= "Reply-To: {$reply_to}\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
