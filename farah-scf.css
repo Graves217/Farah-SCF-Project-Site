@@ -693,3 +693,15 @@ blockquote:first-letter {
         animation: none !important;
     }
 }
+
+/* ========================================================
+   Last-Updated stamp (Rubric Item #4 – document.write)
+   Used on index.html, portfolio.htm, and js.htm.
+   Font-size intentionally smaller than body text per rubric.
+   ======================================================== */
+.last-updated {
+    font-size: 0.75em;
+    margin-top: 0.4em;
+    color: var(--secondary-color);
+    opacity: 0.85;
+}
