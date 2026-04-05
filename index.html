@@ -105,6 +105,20 @@
 
             <footer>
                 &copy; 2026 Farah | Professional Portfolio | farah-scf-project.com
+                <script type="text/javascript">
+                /* document.write Last Updated (Rubric Item #4)
+                 * Reads document.lastModified and writes the date below the footer text.
+                 * Font-size is intentionally smaller than the rest of the page. */
+                var lastMod  = new Date(document.lastModified);
+                var modMonth = lastMod.getMonth() + 1;
+                var modDate  = lastMod.getDate();
+                var modYear  = lastMod.getFullYear();
+                document.write(
+                    "<p style='font-size:0.75em; margin-top:0.4em;'>Last Updated: " +
+                    modMonth + "/" + modDate + "/" + modYear +
+                    "</p>"
+                );
+                </script>
             </footer>
 
         </div> <!-- close wrapper -->
