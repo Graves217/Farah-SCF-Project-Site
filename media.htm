@@ -58,9 +58,20 @@
                         </li>
                         <li>
                             <strong>Video</strong>
-                            <p class="media-note">This section will present a local video file with native controls for play, pause, and seek.</p>
-                            <div class="media-placeholder">Placeholder: Video player embed goes here.</div>
-                            <!-- Expected embed skeleton: <video controls width="640"><source src="media/example.mp4" type="video/mp4">Your browser does not support the video tag.</video> -->
+                            <p class="media-note">This section will include a personally-created MP4 video file stored in the <code>media/</code> folder.</p>
+                            <div class="video-slot" role="group" aria-label="Placeholder for video player">
+                                <div class="video-slot__inner">
+                                    <strong>Video Placeholder (16:9)</strong><br>
+                                    MP4 file will be added later.
+                                </div>
+                            </div>
+                            <!-- Final expected markup:
+                            <video class="video-player" controls>
+                              <source src="media/your-video.mp4" type="video/mp4">
+                              Your browser does not support the video element.
+                            </video>
+                            <p><a href="media/your-video.mp4" download>Download the video (MP4)</a></p>
+                            -->
                         </li>
                         <li>
                             <strong>Animated GIF</strong>
