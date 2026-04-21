@@ -58,10 +58,8 @@
 
     carousel.addEventListener("keydown", function (event) {
         if (event.key === "ArrowLeft") {
-            event.preventDefault();
             showSlide(currentIndex - 1);
         } else if (event.key === "ArrowRight") {
-            event.preventDefault();
             showSlide(currentIndex + 1);
         }
     });
