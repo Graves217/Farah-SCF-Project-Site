@@ -236,6 +236,32 @@ section h2 {
     line-height: 1.35;
 }
 
+.video-slot {
+    width: 100%;
+    max-width: 640px;
+    margin: 8px auto 0;
+    aspect-ratio: 16 / 9;
+    border: 2px dashed #7a8da6;
+    background-color: #f6f9fc;
+    border-radius: 6px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+
+.video-slot__inner {
+    text-align: center;
+    line-height: 1.35;
+}
+
+.video-player {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    display: block;
+}
+
 .gif-slot {
     width: 100%;
     max-width: 420px;
