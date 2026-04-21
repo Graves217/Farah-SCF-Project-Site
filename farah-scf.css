@@ -255,26 +255,44 @@ section h2 {
 .z-stack {
     position: relative;
     width: 100%;
-    max-width: 420px;
-    min-height: 180px;
+    max-width: 460px;
+    min-height: 230px;
 }
 
-.z-stack img {
+.z-stack__layer {
     position: absolute;
-    max-width: 100%;
-    height: auto;
+    width: 78%;
+    min-height: 130px;
+    border: 2px solid #6f8196;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #1f2f3f;
+    text-align: center;
+    padding: 8px 10px;
 }
 
-.z-stack .z-back {
+.z-stack__layer--back {
     top: 0;
     left: 0;
+    background-color: #d9ecff;
     z-index: 1;
 }
 
-.z-stack .z-front {
-    top: 12px;
-    left: 12px;
+.z-stack__layer--front {
+    top: 58px;
+    left: 20%;
+    background-color: #ffe7bf;
     z-index: 2;
+}
+
+.z-stack__caption {
+    font-size: 0.85em;
+    color: #444;
+    margin: 8px 0 0 0;
 }
 
 /* Three-Column Resume Layout */

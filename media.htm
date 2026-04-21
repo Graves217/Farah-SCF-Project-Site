@@ -74,8 +74,11 @@
                         <li>
                             <strong>z-index Stacked Images</strong>
                             <p class="media-note">This section will demonstrate layered images using CSS positioning and z-index values for overlap effects.</p>
-                            <div class="media-placeholder">Placeholder: Two stacked images with z-index hooks go here.</div>
-                            <!-- Expected embed skeleton: <div class="z-stack"><img class="z-back" src="media/background.jpg" alt="Background layer"><img class="z-front" src="media/foreground.png" alt="Foreground layer"></div> -->
+                            <div class="z-stack" aria-label="z-index stacking placeholder demo">
+                                <div class="z-stack__layer z-stack__layer--back">Back Layer (z-index: 1)</div>
+                                <div class="z-stack__layer z-stack__layer--front">Front Layer (z-index: 2)</div>
+                            </div>
+                            <p class="z-stack__caption">Placeholder demo: the front box overlaps the back box using <code>position</code> and <code>z-index</code>.</p>
                         </li>
                     </ol>
 
