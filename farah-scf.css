@@ -195,6 +195,54 @@ section h2 {
     border-bottom: 2px solid var(--border-color);
 }
 
+/* Media Demo Placeholder Styles */
+.media-demo {
+    margin-top: 12px;
+    padding-left: 24px;
+}
+
+.media-demo li {
+    margin-bottom: 20px;
+}
+
+.media-note {
+    font-size: 0.95em;
+    color: #444;
+    margin: 6px 0 8px 0;
+}
+
+.media-placeholder {
+    border: 1px dashed #7a8da6;
+    background-color: #f6f9fc;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.z-stack {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    min-height: 180px;
+}
+
+.z-stack img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
+
+.z-stack .z-back {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.z-stack .z-front {
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+}
+
 /* Three-Column Resume Layout */
 .resume-columns {
     display: flex;
