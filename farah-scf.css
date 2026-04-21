@@ -218,6 +218,21 @@ section h2 {
     border-radius: 4px;
 }
 
+.gif-slot {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    margin: 8px auto 0;
+    border: 2px dashed #7a8da6;
+    background-color: #f6f9fc;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .video-embed {
     position: relative;
     width: 100%;
