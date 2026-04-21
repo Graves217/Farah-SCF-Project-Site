@@ -295,6 +295,82 @@ section h2 {
     margin: 8px 0 0 0;
 }
 
+/* Media Demo Placeholder Carousel Styles */
+.carousel {
+    width: 100%;
+    max-width: 640px;
+    border: 1px solid #7a8da6;
+    border-radius: 8px;
+    background-color: #f6f9fc;
+    padding: 12px;
+}
+
+.carousel__viewport {
+    min-height: 170px;
+}
+
+.carousel__slide {
+    display: none;
+    border: 1px dashed #7a8da6;
+    border-radius: 6px;
+    padding: 14px 12px;
+    background-color: #ffffff;
+}
+
+.carousel__slide.is-active {
+    display: block;
+}
+
+.carousel__title {
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.carousel__controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.carousel__button {
+    border: 1px solid #3a4f68;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #1f2f3f;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.carousel__button:focus-visible,
+.carousel__dot:focus-visible {
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+.carousel__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.carousel__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #3a4f68;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.carousel__dot[aria-current="true"] {
+    background-color: #3a4f68;
+}
+
 /* Three-Column Resume Layout */
 .resume-columns {
     display: flex;

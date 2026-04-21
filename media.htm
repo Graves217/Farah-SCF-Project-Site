@@ -59,8 +59,28 @@
                         </li>
                         <li>
                             <strong>Slideshow / Carousel</strong>
-                            <p class="media-note">This section will include a slideshow container with controls so viewers can move through multiple images.</p>
-                            <div class="media-placeholder">Placeholder: Slideshow/carousel component goes here.</div>
+                            <p class="media-note">This manual slideshow demo uses placeholders for now; these slides will be replaced with real images later.</p>
+                            <section class="carousel" data-carousel aria-label="Slideshow demo" tabindex="0">
+                                <div class="carousel__viewport" data-carousel-track>
+                                    <div class="carousel__slide is-active" data-carousel-slide aria-hidden="false">
+                                        <p class="carousel__title">Slide 1</p>
+                                        <p>Placeholder slide content (future image slot).</p>
+                                    </div>
+                                    <div class="carousel__slide" data-carousel-slide aria-hidden="true">
+                                        <p class="carousel__title">Slide 2</p>
+                                        <p>Placeholder slide content (future image slot).</p>
+                                    </div>
+                                    <div class="carousel__slide" data-carousel-slide aria-hidden="true">
+                                        <p class="carousel__title">Slide 3</p>
+                                        <p>Placeholder slide content (future image slot).</p>
+                                    </div>
+                                </div>
+                                <div class="carousel__controls" aria-label="Slideshow controls">
+                                    <button type="button" class="carousel__button" data-carousel-prev aria-label="Previous slide">Prev</button>
+                                    <div class="carousel__dots" data-carousel-dots aria-label="Choose slide"></div>
+                                    <button type="button" class="carousel__button" data-carousel-next aria-label="Next slide">Next</button>
+                                </div>
+                            </section>
                             <!-- Expected embed skeleton: <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="Featured image slideshow"><button type="button" aria-label="Previous slide">Prev</button><div class="slides" aria-live="polite"></div><button type="button" aria-label="Next slide">Next</button></div> -->
                         </li>
                         <li>
@@ -110,6 +130,8 @@
             </footer>
 
         </div> <!-- close wrapper -->
+
+        <script src="media-carousel.js" type="text/javascript"></script>
 
     </body>
 </html>
