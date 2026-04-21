@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Anthony Farah">
+        <meta name="description" content="Anthony J Farah - Media Demo page with planned audio, video, animation, slideshow, YouTube, and layered image examples.">
+        <title>Media Demo - Anthony J Farah</title>
+        <link href="farah-scf.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div id="wrapper"> <!-- open wrapper -->
+
+            <header>
+                <h1>Media Demo</h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.htm">Resume</a></li>
+                    <li><a href="portfolio.htm">Portfolio</a></li>
+                    <li><a href="newsletter.htm">Newsletter</a></li>
+                    <li><a href="contact.htm">Contact</a></li>
+                    <li><a href="transcript.htm">Transcript</a></li>
+                </ul>
+            </nav>
+
+            <main>
+
+                <hr>
+
+                <section id="media-demo">
+
+                    <h2>Planned Media Components</h2>
+
+                    <p>This page scaffolds the required media items for the assignment and will be expanded with files from the media folder.</p>
+
+                    <ol>
+                        <li>Audio</li>
+                        <li>Video</li>
+                        <li>Animated GIF</li>
+                        <li>Slideshow / Carousel</li>
+                        <li>YouTube (optional item placeholder)</li>
+                        <li>z-index stacked images (optional item placeholder)</li>
+                    </ol>
+
+                </section>
+
+            </main>
+
+            <div id="social"> <!-- open social -->
+                Facebook | Twitter | YouTube
+            </div> <!-- close social -->
+
+            <footer>
+                &copy; 2026 Farah | Professional Portfolio | farah-scf-project.com
+                <script type="text/javascript">
+                /* document.write Last Updated (Rubric Item #4)
+                 * Reads document.lastModified and writes the date below the footer text.
+                 * Uses the "last-updated" CSS class from farah-scf.css for consistent
+                 * styling across all pages (smaller font, visually separated). */
+                var lastMod  = new Date(document.lastModified);
+                var modMonth = lastMod.getMonth() + 1;
+                var modDate  = lastMod.getDate();
+                var modYear  = lastMod.getFullYear();
+                document.write(
+                    "<p class='last-updated'>Last Updated: " +
+                    modMonth + "/" + modDate + "/" + modYear +
+                    "</p>"
+                );
+                </script>
+            </footer>
+
+        </div> <!-- close wrapper -->
+
+    </body>
+</html>
