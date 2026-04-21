@@ -218,6 +218,24 @@ section h2 {
     border-radius: 4px;
 }
 
+.audio-slot {
+    width: 100%;
+    max-width: 520px;
+    margin: 8px auto 0;
+    border: 2px dashed #7a8da6;
+    background-color: #f6f9fc;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.audio-slot__inner {
+    width: 100%;
+    text-align: center;
+    line-height: 1.35;
+}
+
 .gif-slot {
     width: 100%;
     max-width: 420px;
