@@ -211,11 +211,31 @@ section h2 {
     margin: 6px 0 8px 0;
 }
 
+.media-placeholder-note {
+    font-size: 0.95em;
+    color: #444;
+    margin: 8px 0 0 0;
+    font-style: italic;
+}
+
 .media-placeholder {
     border: 1px dashed #7a8da6;
     background-color: #f6f9fc;
     padding: 10px 12px;
     border-radius: 4px;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 0.95em;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    color: var(--accent-color);
 }
 
 .audio-slot {
