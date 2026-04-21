@@ -4,7 +4,7 @@
         return;
     }
 
-    var slides = Array.prototype.slice.call(carousel.querySelectorAll("[data-carousel-slide]"));
+    var slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
     var prevButton = carousel.querySelector("[data-carousel-prev]");
     var nextButton = carousel.querySelector("[data-carousel-next]");
     var dotsContainer = carousel.querySelector("[data-carousel-dots]");
