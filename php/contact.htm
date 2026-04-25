@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Anthony Farah">
+        <meta name="description" content="Contact Anthony J Farah via the online contact form to ask questions, request information, or connect professionally.">
+        <title>Contact - Anthony J Farah</title>
+        <link href="farah-scf.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div id="wrapper"> <!-- open wrapper -->
+
+            <header>
+                <h1>Contact Me</h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.htm">Resume</a></li>
+                    <li><a href="media.htm">Media</a></li>
+                    <li><a href="portfolio.htm">Portfolio</a></li>
+                    <li><a href="newsletter.htm">Newsletter</a></li>
+                    <li><a href="contact.htm" class="selected">Contact</a></li>
+                    <li><a href="transcript.htm">Transcript</a></li>
+                </ul>
+            </nav>
+
+            <main>
+
+                <hr>
+
+                <section id="contact">
+
+                    <h2>Contact Information</h2>
+
+                    <p>
+                        <b>Anthony J Farah</b><br>
+                        Bradenton, FL<br>
+                        Email: <a href="mailto:a.farah2178@yahoo.com">a.farah2178@yahoo.com</a><br>
+                        Phone: <a href="tel:+19083283015">+1 (908) 328-3015</a><br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/anthony-farah-a54164153/" target="_blank" rel="noopener noreferrer">linkedin.com/in/anthony-farah-a54164153</a>
+                    </p>
+
+                    <!-- CONTACT FORM TABLE -->
+                    <!-- NOTE: FormProcess.php requires a PHP-capable server to send email.
+                         GitHub Pages does not execute PHP. Upload to a PHP host to test
+                         the email functionality and screenshot the confirmation for submission. -->
+                    <form action="FormProcess.php" method="post" enctype="application/x-www-form-urlencoded">
+                    <table class="contact-table">
+                        <!-- Row 1: Table Header -->
+                        <tr>
+                            <th colspan="2">Contact Anthony J Farah</th>
+                        </tr>
+                        <!-- Row 2: Nature of Contact -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Nature of Contact:</td>
+                            <td><textarea name="NatureOfContact" rows="2" cols="35" required></textarea></td>
+                        </tr>
+                        <!-- Row 3: Prefix -->
+                        <tr>
+                            <td style="text-align:right">Prefix:</td>
+                            <td>
+                                <select name="Prefix">
+                                    <option value="">-- Select --</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Ms.">Ms.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Row 4: First Name (required) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> First Name:</td>
+                            <td><input type="text" name="FirstName" size="30" required></td>
+                        </tr>
+                        <!-- Row 5: Last Name (required) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Last Name:</td>
+                            <td><input type="text" name="LastName" size="30" required></td>
+                        </tr>
+                        <!-- Row 6: Street Address -->
+                        <tr>
+                            <td style="text-align:right">Street Address:</td>
+                            <td><input type="text" name="StreetAddress" size="30"></td>
+                        </tr>
+                        <!-- Row 7: City -->
+                        <tr>
+                            <td style="text-align:right">City:</td>
+                            <td><input type="text" name="City" size="30"></td>
+                        </tr>
+                        <!-- Row 8: State dropdown (defaults to FL) -->
+                        <tr>
+                            <td style="text-align:right">State:</td>
+                            <td>
+                                <select name="State">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District of Columbia</option>
+                                    <option value="FL" selected>Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Row 9: Zip (5-digit pattern) -->
+                        <tr>
+                            <td style="text-align:right">Zip Code:</td>
+                            <td><input type="text" name="Zip" size="10" pattern="[0-9]{5}" title="Five digit zip code"></td>
+                        </tr>
+                        <!-- Row 10: Email (required) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Email:</td>
+                            <td><input type="email" name="Email" size="35" required></td>
+                        </tr>
+                        <!-- Row 11: Phone Number -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Phone Number:</td>
+                            <td><input type="tel" name="Phone" size="30" required></td>
+                        </tr>
+                        <!-- Row 12: Preferred Contact Method (radio group; same name, different id) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Preferred Contact Method:</td>
+                            <td>
+                                <input type="radio" name="PreferredMethod" id="method-email" value="Email" required> <label for="method-email">Email</label> &nbsp;
+                                <input type="radio" name="PreferredMethod" id="method-call" value="Call"> <label for="method-call">Call</label> &nbsp;
+                                <input type="radio" name="PreferredMethod" id="method-text" value="Text"> <label for="method-text">Text</label>
+                            </td>
+                        </tr>
+                        <!-- Row 13: Agreement checkbox (required) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Agreement:</td>
+                            <td><input type="checkbox" name="Agreement" id="Agreement" value="yes" required> <label for="Agreement">I agree to be contacted</label></td>
+                        </tr>
+                        <!-- Row 14: Comments (required) -->
+                        <tr>
+                            <td style="text-align:right"><span class="required">*</span> Additional Comments:</td>
+                            <td><textarea name="Comments" rows="4" cols="35" required></textarea></td>
+                        </tr>
+                        <!-- Row 15: Buttons -->
+                        <tr>
+                            <td colspan="2" style="text-align:center">
+                                <input type="submit" value="Submit"> &nbsp;
+                                <input type="reset" value="Reset">
+                            </td>
+                        </tr>
+                    </table> <!-- close contact-table -->
+                    </form>
+
+                </section>
+
+            </main>
+
+            <div id="social"> <!-- open social -->
+                Facebook | Twitter | YouTube
+            </div> <!-- close social -->
+
+            <footer>
+                &copy; 2026 Farah | Professional Portfolio | farah-scf-project.com
+            </footer>
+
+        </div> <!-- close wrapper -->
+
+    </body>
+</html>
