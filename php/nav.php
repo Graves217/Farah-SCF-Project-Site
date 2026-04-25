@@ -7,5 +7,6 @@
                     <li><a href="newsletter.php">Newsletter</a></li>
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="transcript.php">Transcript</a></li>
+                    <li><a href="demo.php">PHP Demo</a></li>
                 </ul>
             </nav>
