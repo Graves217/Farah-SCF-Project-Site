@@ -96,7 +96,7 @@ if (!empty($errors)) {
     // Return to the form with a simple error message
     // (Browser validation should catch these first; this is a fallback.)
     $error_list = implode("\n", $errors);
-    header('Location: contact.htm?error=' . urlencode($error_list));
+    header('Location: contact.php?error=' . urlencode($error_list));
     exit;
 }
 
@@ -145,5 +145,5 @@ if (!$mail_sent) {
 }
 
 // ── Redirect to confirmation page ────────────────────────────────────────────
-header('Location: contactSent.htm');
+header('Location: contactSent.php');
 exit;

@@ -8,5 +8,6 @@
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="transcript.php">Transcript</a></li>
                     <li><a href="demo.php">PHP Demo</a></li>
+                    <li><a href="js.php">JavaScript</a></li>
                 </ul>
             </nav>
