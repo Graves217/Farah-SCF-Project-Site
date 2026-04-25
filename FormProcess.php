@@ -64,6 +64,9 @@ $Comments         = sanitize_field($_POST['Comments']         ?? '');
 // ── Basic server-side validation ─────────────────────────────────────────────
 $errors = [];
 
+if ($NatureOfContact === '') {
+    $errors[] = 'Nature of Contact is required.';
+}
 if ($FirstName === '') {
     $errors[] = 'First Name is required.';
 }
@@ -72,6 +75,12 @@ if ($LastName === '') {
 }
 if ($Email === '' || !filter_var($_POST['Email'] ?? '', FILTER_VALIDATE_EMAIL)) {
     $errors[] = 'A valid Email address is required.';
+}
+if ($Phone === '') {
+    $errors[] = 'Phone Number is required.';
+}
+if ($PreferredMethod === '') {
+    $errors[] = 'Preferred Contact Method is required.';
 }
 if ($Comments === '') {
     $errors[] = 'Comments are required.';
