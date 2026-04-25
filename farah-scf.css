@@ -290,6 +290,18 @@ section h2 {
     line-height: 1.35;
 }
 
+/* Center the live audio player on media.htm (Media item #1) */
+.media-audio {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.media-audio audio {
+    display: block;
+    width: min(600px, 100%);
+}
+
 .video-slot {
     width: 100%;
     max-width: 1200px;
