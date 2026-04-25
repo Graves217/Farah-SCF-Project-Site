@@ -1075,8 +1075,9 @@ blockquote:first-letter {
 
 /* ========================================================
    RSS Feed Widget (Rubric Item #7)
-   JavaScript embed – fetches WIRED RSS via allorigins proxy
-   and parses XML client-side (no API key required)
+   Attempts to embed the WIRED homepage in an iframe first;
+   falls back to fetching WIRED RSS via allorigins proxy and
+   rendering article list client-side (no API key required).
    ======================================================== */
 .rss-feed-label {
     font-weight: bold;
@@ -1093,6 +1094,53 @@ blockquote:first-letter {
     border-radius: 8px;
     overflow: hidden;
     background-color: #f6f9fc;
+}
+
+/* ---- WIRED homepage iframe embed ---- */
+.wired-embed {
+    width: 100%;
+}
+
+.wired-embed__iframe {
+    display: block;
+    width: 100%;
+    /* 16:9 aspect ratio – scales with container width */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+    min-height: 300px;
+}
+
+.wired-embed__links {
+    padding: 6px 16px;
+    font-size: 0.82em;
+    color: var(--secondary-color);
+    margin: 0;
+    border-top: 1px solid #d5dde8;
+    text-align: center;
+}
+
+.wired-embed__links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.wired-embed__links a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Fallback RSS list panel ---- */
+.rss-fallback {
+    width: 100%;
+}
+
+.rss-note {
+    padding: 10px 16px 6px;
+    font-size: 0.85em;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin: 0;
+    border-bottom: 1px solid #d5dde8;
 }
 
 .rss-loading,
