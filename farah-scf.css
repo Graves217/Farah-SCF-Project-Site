@@ -392,9 +392,9 @@ section h2 {
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 280px;
-    margin: 12px 0 32px;
-    overflow: hidden;
+    height: 360px;            /* increased from 280px so rotated images don't clip at the bottom */
+    margin: 12px 0 64px;      /* larger bottom margin ensures clearance before the next section */
+    overflow: visible;        /* allow rotated corners to show naturally */
 }
 
 .photo-pile__img {
@@ -424,7 +424,7 @@ section h2 {
 
 @media (max-width: 480px) {
     .photo-pile {
-        height: 240px;
+        height: 300px;         /* increased from 240px to match taller container */
     }
 
     .photo-pile__img {
