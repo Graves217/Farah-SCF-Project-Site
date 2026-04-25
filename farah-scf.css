@@ -227,6 +227,8 @@ section h2 {
 
 .back-to-top {
     display: inline-block;
+    position: relative;       /* ensures z-index applies so link stays above any positioned content */
+    z-index: 10;              /* above stacked images – prevents photos from covering this link */
     margin-top: 6px;
     color: var(--primary-color);
     text-decoration: underline;
@@ -392,9 +394,10 @@ section h2 {
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 360px;            /* increased from 280px so rotated images don't clip at the bottom */
-    margin: 12px 0 64px;      /* larger bottom margin ensures clearance before the next section */
-    overflow: visible;        /* allow rotated corners to show naturally */
+    height: 360px;            /* reserves vertical space so absolute children don't overflow into adjacent sections */
+    margin: 12px 0 80px;      /* generous bottom margin separates stack from following sections */
+    overflow: hidden;         /* clip images to container bounds – prevents visual bleed into Back to Top / RSS section */
+    isolation: isolate;       /* creates a self-contained stacking context so z-index values are scoped here */
 }
 
 .photo-pile__img {
