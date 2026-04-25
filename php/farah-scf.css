@@ -1,0 +1,1285 @@
+/* Professional Color Scheme */
+:root {
+    --primary-color: #002147;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #0066cc;
+    --border-color: #002147;
+    --background-color: #f5f5f5;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Wrapper Styles */
+#wrapper {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border-color);
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center top;
+    color: var(--secondary-color);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* CSS3 clamp(): responsive heading size */
+    margin: 0;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-bottom: 2px solid var(--border-color);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6em;
+    display: block;
+    padding: 4px 12px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+nav ul li a.active,
+nav ul li a.selected {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+@media (min-width: 640px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Main Content Styles */
+main {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    color: var(--text-color);
+}
+
+main p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+main ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+main li {
+    color: var(--text-color);
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin: 15px 0 10px 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 0.03em;
+}
+h2 {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem); /* CSS3 clamp(): responsive heading size */
+    color: var(--accent-color);
+}
+h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* Resume Specific Styles */
+.resume-container {
+    background-color: var(--secondary-color);
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+}
+
+.resume-header h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-info {
+    color: #666;
+    font-size: 13px;
+    background-color: var(--secondary-color);
+}
+
+.resume-left, .resume-right, .resume-full {
+    background-color: var(--secondary-color);
+}
+
+/* Section Styles */
+section {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Media Demo Placeholder Styles */
+.media-demo {
+    margin-top: 12px;
+    padding-left: 24px;
+}
+
+.media-demo li {
+    margin-bottom: 20px;
+}
+
+.media-components-title {
+    text-align: center;
+}
+
+.media-note {
+    font-size: 0.95em;
+    color: #444;
+    margin: 6px 0 8px 0;
+}
+
+.media-placeholder-note {
+    font-size: 0.95em;
+    color: #444;
+    margin: 8px 0 0 0;
+    font-style: italic;
+}
+
+.media-citation {
+    font-size: 0.9em;
+    color: #555;
+    margin: 8px 0 0 0;
+}
+
+.media-placeholder {
+    border: 1px dashed #7a8da6;
+    background-color: #f6f9fc;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.back-to-top {
+    display: inline-block;
+    position: relative;       /* ensures z-index applies so link stays above any positioned content */
+    z-index: 10;              /* above stacked images – prevents photos from covering this link */
+    margin-top: 6px;
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 0.95em;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    color: var(--accent-color);
+}
+
+/* ============================================================
+   Shared media utility: uniform 1200 px max-width, centered.
+   Apply .media-frame to any block-level media wrapper so all
+   items on media.htm render at the same consistent width.
+   ============================================================ */
+.media-frame {
+    width: 100%;
+    max-width: 1200px;
+    margin: 8px auto 0;
+    box-sizing: border-box;
+}
+
+/* 16:9 aspect-ratio variant for iframe embeds */
+.media-frame--16x9 {
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.media-frame--16x9 iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.audio-slot {
+    width: 100%;
+    max-width: 1200px;
+    margin: 8px auto 0;
+    border: 2px dashed #7a8da6;
+    background-color: #f6f9fc;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.audio-slot__inner {
+    width: 100%;
+    text-align: center;
+    line-height: 1.35;
+}
+
+/* Center the live audio player on media.htm (Media item #1) */
+.media-audio {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.media-audio audio {
+    display: block;
+    width: min(600px, 100%);
+}
+
+/* Center the live video player on media.htm (Media item #2) */
+.media-video {
+    max-width: 450px;
+    width: 100%;
+    margin: 8px auto;
+}
+
+.media-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video-slot {
+    width: 100%;
+    max-width: 1200px;
+    margin: 8px auto 0;
+    aspect-ratio: 16 / 9;
+    border: 2px dashed #7a8da6;
+    background-color: #f6f9fc;
+    border-radius: 6px;
+    padding: 12px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+
+.video-slot__inner {
+    text-align: center;
+    line-height: 1.35;
+}
+
+.video-player {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+}
+
+.gif-slot {
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 1 / 1;
+    margin: 8px auto 0;
+    border: 2px dashed #7a8da6;
+    background-color: #f6f9fc;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.media-gif {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 8px auto 0;
+    border: 1px solid #7a8da6;
+    border-radius: 6px;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    margin: 8px auto;
+}
+
+.video-embed::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+@supports (aspect-ratio: 16 / 9) {
+    .video-embed::before {
+        display: none;
+    }
+}
+
+.video-embed iframe,
+.video-embed .media-placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-embed .media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.z-stack {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    min-height: 230px;
+}
+
+.z-stack__layer {
+    position: absolute;
+    width: 78%;
+    min-height: 130px;
+    border: 2px solid #6f8196;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #1f2f3f;
+    text-align: center;
+    padding: 8px 10px;
+}
+
+.z-stack__layer--back {
+    top: 0;
+    left: 0;
+    background-color: #d9ecff;
+    z-index: 1;
+}
+
+.z-stack__layer--front {
+    top: 58px;
+    left: 20%;
+    background-color: #ffe7bf;
+    z-index: 2;
+}
+
+.z-stack__caption {
+    font-size: 0.85em;
+    color: #444;
+    margin: 8px 0 0 0;
+}
+
+/* ============================================================
+   Photo-pile stacked images (Rubric Item #8 – z-index)
+   Two images overlap at an angle to make stacking obvious.
+   ============================================================ */
+.photo-pile {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 360px;            /* reserves vertical space so absolute children don't overflow into adjacent sections */
+    margin: 12px auto 80px;   /* auto left/right centers the pile; generous bottom margin separates stack from following sections */
+    overflow: hidden;         /* clip images to container bounds – prevents visual bleed into Back to Top / RSS section */
+    isolation: isolate;       /* creates a self-contained stacking context so z-index values are scoped here */
+}
+
+.photo-pile__img {
+    position: absolute;
+    width: 55%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.photo-pile__img--back {
+    top: 20px;
+    left: 4%;
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+
+.photo-pile__img--front {
+    top: 80px;
+    left: 28%;
+    transform: rotate(4deg);
+    z-index: 2;
+}
+
+@media (max-width: 480px) {
+    .photo-pile {
+        height: 300px;         /* increased from 240px to match taller container */
+    }
+
+    .photo-pile__img {
+        width: 65%;
+        max-width: 200px;
+        height: 140px;
+    }
+
+    .photo-pile__img--back {
+        left: 2%;
+        top: 15px;
+        transform: rotate(-3deg);
+    }
+
+    .photo-pile__img--front {
+        left: 20%;
+        top: 70px;
+        transform: rotate(2deg);
+    }
+}
+
+/* Media Page Image Carousel Styles */
+.carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #7a8da6;
+    border-radius: 8px;
+    background-color: #f6f9fc;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.carousel__viewport {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.carousel__slide {
+    display: none;
+    background-color: #000000; /* dark letterbox background for image slides */
+}
+
+.carousel__slide.is-active {
+    display: block;
+}
+
+.carousel__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.carousel__caption {
+    margin: 8px 4px 0;
+    font-size: 0.9em;
+    color: #1f2f3f;
+    text-align: center;
+}
+
+.carousel__controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.carousel__button {
+    border: 1px solid #3a4f68;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #1f2f3f;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.carousel__button:hover {
+    background-color: #dce8f5;
+}
+
+.carousel__button:focus-visible,
+.carousel__dot:focus-visible {
+    outline: 2px solid #002147;
+    outline-offset: 2px;
+}
+
+.carousel__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.carousel__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #3a4f68;
+    background-color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel__dot[aria-current="true"] {
+    background-color: #3a4f68;
+}
+
+/* Three-Column Resume Layout */
+.resume-columns {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.resume-column {
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-column.left {
+    flex: 1.2;
+}
+
+.resume-column.middle {
+    flex: 1;
+}
+
+.resume-column.right {
+    flex: 1;
+}
+
+/* Section Headers with Professional Styling */
+.resume-column h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Skills Section Single-Column Layout in 3-column design */
+#skills ul {
+    column-count: 1;
+    padding-left: 20px;
+}
+
+/* Education and Awards Sections */
+#education, #certifications, #awards {
+    margin-bottom: 25px;
+}
+
+/* Experience Section Styling */
+#experience h3 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+#experience > div {
+    margin-bottom: 25px;
+}
+
+#experience hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Required Field Marker */
+.required {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* Contact Table Styles */
+.contact-table,
+#contact table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid var(--border-color);
+}
+
+.contact-table th,
+#contact table th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 1.05em;
+    letter-spacing: 0.02em;
+}
+
+.contact-table td,
+#contact table td {
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    vertical-align: middle;
+}
+
+.contact-table tr:nth-child(even) td,
+#contact table tr:nth-child(even) td {
+    background-color: #f0f4fa;
+}
+
+.contact-table input[type="text"],
+.contact-table select,
+.contact-table textarea,
+#contact table input[type="text"],
+#contact table select,
+#contact table textarea {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 4px 6px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+/* Transcript Table Styles */
+.transcript-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.transcript-table caption {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.transcript-table th,
+.transcript-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.transcript-table thead th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.transcript-table tbody tr:nth-child(even) {
+    background-color: #f0f4fa;
+}
+
+.transcript-table tfoot td {
+    background-color: #e8edf5;
+    font-weight: bold;
+}
+
+/* Transcript Two-Column Layout */
+.transcript-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.transcript-col {
+    flex: 2;
+    min-width: 0;
+}
+
+.references-col {
+    flex: 1;
+    min-width: 0;
+}
+
+/* References Styles */
+.references-list {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.reference-entry {
+    margin: 15px 0;
+    padding: 10px 0;
+}
+
+.reference-entry h3 {
+    margin-bottom: 8px;
+}
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+    color: var(--accent-color);
+}
+
+.certification-note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Resume footnote link */
+.resume-footnote {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Special Characters Style */
+.special {
+    color: purple;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Course List Style */
+.course-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+/* Recommend List Style */
+.recommend-list {
+    list-style-image: url(images/recommend-bullet.png);
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+/* Certifications Description List */
+.cert-dl dt {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.cert-dl dd {
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+/* References Ordered List Style */
+.references-ordered {
+    list-style-type: lower-roman;
+}
+
+/* Social Section Styles */
+#social {
+    background-color: #f0f0f0;
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 15px;
+    border-top: 3px solid var(--accent-color);
+    font-size: 14px;
+}
+
+/* Link Styles */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Highlight Styles */
+.highlight {
+    background-color: #ffffcc;
+    padding: 2px 4px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Portfolio Figure Grid Styles */
+#figureContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#figureContainer figure {
+    flex: 0 1 320px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#figureContainer img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+#figureContainer figcaption {
+    margin-top: 8px;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Specs List Styles */
+.specs-list {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+    margin: 10px auto 0 auto;
+    max-width: 440px;
+    font-style: normal;
+    color: var(--text-color);
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+/* Stack resume columns on smaller screens */
+@media (max-width: 1200px) {
+    .resume-columns {
+        flex-direction: column;
+    }
+    
+    .resume-column {
+        width: 100%;
+    }
+    
+    #skills ul {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        margin: 10px;
+        padding: 5px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    #skills ul {
+        column-count: 1;
+    }
+
+    .transcript-layout {
+        flex-direction: column;
+    }
+
+    #figureContainer figure {
+        flex: 1 1 100%;
+    }
+}
+
+/* ========================================================
+   Profile & LinkedIn Icon Classes (replaces inline styles)
+   ======================================================== */
+.profile-img {
+    float: right;
+    margin: 10px;
+    width: 180px;
+    border-radius: 8px;
+}
+
+.linkedin-icon {
+    border: 0;
+    float: right;
+    margin: 10px;
+    width: 50px;
+}
+
+/* ========================================================
+   Newsletter Styles
+   ======================================================== */
+
+/* Full-justify paragraphs in main content */
+main p {
+    text-align: justify;
+}
+
+/* Newsletter meta line (date / byline) */
+.newsletter-meta {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 6px;
+}
+
+/* Styled HR for newsletter */
+hr.newsletter-divider {
+    border: none;
+    border-top: 4px solid var(--accent-color);
+    width: 80%;
+    margin: 18px auto;
+    border-radius: 4px;
+}
+
+/* Infobar: inverse-color announcement banner */
+.infobar {
+    background: linear-gradient(90deg, var(--primary-color) 0%, #004080 100%);
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.05em;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+/* .box callout area */
+.box {
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    background-color: #f0f6ff;
+    box-shadow: 3px 3px 8px rgba(0, 33, 71, 0.15);
+}
+
+.box h3 {
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+/* Blockquote styles */
+blockquote {
+    border-left: 5px solid var(--accent-color);
+    margin: 20px 0;
+    padding: 14px 20px;
+    background-color: #f7f9fc;
+    font-style: italic;
+    color: var(--primary-color);
+    text-align: justify;
+    border-radius: 0 4px 4px 0;
+}
+
+blockquote:first-letter {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: var(--accent-color);
+    float: left;
+    line-height: 0.75;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+
+/* Newsletter image-bullet list */
+.newsletter-list {
+    list-style-image: url(images/recommend-bullet.png);
+    padding-left: 28px;
+    margin: 14px 0;
+    line-height: 1.8;
+}
+
+/* SCF Journey section image */
+.journey-wrap {
+    display: flow-root;
+}
+
+.journey-img {
+    float: right;
+    width: 40%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 0 12px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .journey-img {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 12px 0;
+    }
+}
+
+/* CSS3 prefers-reduced-motion: disable transitions/animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ========================================================
+   RSS Feed Widget (Rubric Item #7)
+   Attempts to embed the WIRED homepage in an iframe first;
+   falls back to fetching WIRED RSS via allorigins proxy and
+   rendering article list client-side (no API key required).
+   ======================================================== */
+.rss-feed-label {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.05em;
+    margin: 8px 0 6px 0;
+}
+
+.rss-widget-wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #7a8da6;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f6f9fc;
+}
+
+/* ---- WIRED homepage iframe embed ---- */
+.wired-embed {
+    width: 100%;
+}
+
+.wired-embed__iframe {
+    display: block;
+    width: 100%;
+    /* 16:9 aspect ratio – scales with container width */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+    min-height: 300px;
+}
+
+.wired-embed__links {
+    padding: 6px 16px;
+    font-size: 0.82em;
+    color: var(--text-color);
+    margin: 0;
+    border-top: 1px solid #d5dde8;
+    text-align: center;
+}
+
+.wired-embed__links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.wired-embed__links a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Fallback RSS list panel ---- */
+.rss-fallback {
+    width: 100%;
+}
+
+.rss-note {
+    padding: 10px 16px 6px;
+    font-size: 0.85em;
+    color: var(--text-color);
+    font-style: italic;
+    margin: 0;
+    border-bottom: 1px solid #d5dde8;
+}
+
+.rss-loading,
+.rss-error {
+    padding: 20px 16px;
+    text-align: center;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+.rss-error a {
+    color: var(--primary-color);
+}
+
+.rss-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.rss-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #d5dde8;
+}
+
+.rss-item:last-child {
+    border-bottom: none;
+}
+
+.rss-item__title {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+.rss-item__title:hover {
+    text-decoration: underline;
+}
+
+.rss-item__date {
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.rss-item__desc {
+    margin: 0;
+    font-size: 0.88em;
+    color: #444;
+    line-height: 1.4;
+}
+
+.rss-citation {
+    padding: 8px 16px;
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin: 0;
+    border-top: 1px solid #d5dde8;
+}
+
+.rss-citation a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.rss-citation a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================================
+   LinkedIn Post Embed (Rubric Item #10 – Embedded Social Media)
+   ======================================================== */
+.linkedin-post-label {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.05em;
+    margin: 8px 0 6px 0;
+}
+
+.linkedin-embed-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #7a8da6;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f6f9fc;
+}
+
+.linkedin-embed-iframe {
+    width: 100%;
+    height: 570px;
+    border: none;
+    display: block;
+}
+
+/* ========================================================
+   Last-Updated stamp (Rubric Item #4 – document.write)
+   Used on index.html, portfolio.htm, and js.htm.
+   Font-size intentionally smaller than body text per rubric.
+   ======================================================== */
+.last-updated {
+    font-size: 0.75em;
+    margin-top: 0.4em;
+    color: var(--secondary-color);
+    opacity: 0.85;
+}
