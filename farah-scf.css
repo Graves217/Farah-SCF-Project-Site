@@ -205,6 +205,10 @@ section h2 {
     margin-bottom: 20px;
 }
 
+.media-components-title {
+    text-align: center;
+}
+
 .media-note {
     font-size: 0.95em;
     color: #444;
