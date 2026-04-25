@@ -211,7 +211,7 @@
                                         chosen.textContent = "You chose: " + techArea;
 
                                         var link = document.createElement("a");
-                                        link.href = "portfolio.htm";
+                                        link.href = "portfolio.php";
                                         link.textContent = "Portfolio page";
 
                                         var para = document.createElement("p");
@@ -232,7 +232,7 @@
                                         resultDiv.appendChild(para);
                                     } else {
                                         var link2 = document.createElement("a");
-                                        link2.href = "portfolio.htm";
+                                        link2.href = "portfolio.php";
                                         link2.textContent = "explore the portfolio";
 
                                         var para2 = document.createElement("p");
@@ -258,7 +258,7 @@
                             <div class="js-section">
                                 <h3>Last Updated &#8211; document.write</h3>
                                 <p>A <code>document.write</code> last-modified statement has been added to the bottom of the
-                                   <a href="index.html">Home page</a> and the <a href="portfolio.htm">Portfolio page</a>
+                                   <a href="index.php">Home page</a> and the <a href="portfolio.php">Portfolio page</a>
                                    with a smaller font size. The date below reflects <em>this</em> page&#8217;s last modification:</p>
 
                                 <script type="text/javascript">
@@ -285,7 +285,7 @@
                         <li>
                             <div class="js-section">
                                 <h3>PC Build Budget Calculator</h3>
-                                <p>Enter a budget for each component to estimate your custom PC build cost &#8212; inspired by the builds showcased in the <a href="portfolio.htm">Portfolio</a>.</p>
+                                <p>Enter a budget for each component to estimate your custom PC build cost &#8212; inspired by the builds showcased in the <a href="portfolio.php">Portfolio</a>.</p>
 
                                 <form class="calc-form" onsubmit="return false;">
                                     <label for="cpu">CPU ($):</label>
@@ -472,7 +472,7 @@
                                 <p id="popupFallback" style="display:none; color:#cc0000; margin-top:0.6em;">
                                     <strong>Pop-up blocked.</strong> Please allow pop-ups for this site and
                                     click the button again, or view the
-                                    <a href="contact.htm">Contact page</a> for site details.
+                                    <a href="contact.php">Contact page</a> for site details.
                                 </p>
 
                                 <script type="text/javascript">
