@@ -391,48 +391,58 @@ section h2 {
 .photo-pile {
     position: relative;
     width: 100%;
-    max-width: 420px;
+    max-width: 500px;
     height: 280px;
-    margin: 12px 0 24px;
+    margin: 12px 0 32px;
+    overflow: hidden;
 }
 
 .photo-pile__img {
     position: absolute;
-    width: 72%;
-    max-width: 300px;
-    height: auto;
+    width: 55%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
     border: 4px solid #ffffff;
     border-radius: 4px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
-    object-fit: cover;
 }
 
 .photo-pile__img--back {
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 4%;
     transform: rotate(-6deg);
     z-index: 1;
 }
 
 .photo-pile__img--front {
-    top: 40px;
-    left: 22%;
+    top: 80px;
+    left: 28%;
     transform: rotate(4deg);
     z-index: 2;
 }
 
 @media (max-width: 480px) {
     .photo-pile {
-        height: 200px;
+        height: 240px;
     }
 
     .photo-pile__img {
-        width: 80%;
+        width: 65%;
+        max-width: 200px;
+        height: 140px;
+    }
+
+    .photo-pile__img--back {
+        left: 2%;
+        top: 15px;
+        transform: rotate(-3deg);
     }
 
     .photo-pile__img--front {
-        left: 16%;
-        top: 30px;
+        left: 20%;
+        top: 70px;
+        transform: rotate(2deg);
     }
 }
 
