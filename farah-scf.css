@@ -384,6 +384,58 @@ section h2 {
     margin: 8px 0 0 0;
 }
 
+/* ============================================================
+   Photo-pile stacked images (Rubric Item #8 – z-index)
+   Two images overlap at an angle to make stacking obvious.
+   ============================================================ */
+.photo-pile {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 280px;
+    margin: 12px 0 24px;
+}
+
+.photo-pile__img {
+    position: absolute;
+    width: 72%;
+    max-width: 300px;
+    height: auto;
+    border: 4px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+    object-fit: cover;
+}
+
+.photo-pile__img--back {
+    top: 0;
+    left: 0;
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+
+.photo-pile__img--front {
+    top: 40px;
+    left: 22%;
+    transform: rotate(4deg);
+    z-index: 2;
+}
+
+@media (max-width: 480px) {
+    .photo-pile {
+        height: 200px;
+    }
+
+    .photo-pile__img {
+        width: 80%;
+    }
+
+    .photo-pile__img--front {
+        left: 16%;
+        top: 30px;
+    }
+}
+
 /* Media Page Image Carousel Styles */
 .carousel {
     width: 100%;
