@@ -41,17 +41,7 @@
                 </map>
             </header>
 
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="selected">Home</a></li>
-                    <li><a href="resume.htm">Resume</a></li>
-                    <li><a href="media.htm">Media</a></li>
-                    <li><a href="portfolio.htm">Portfolio</a></li>
-                    <li><a href="newsletter.htm">Newsletter</a></li>
-                    <li><a href="contact.htm">Contact</a></li>
-                    <li><a href="transcript.htm">Transcript</a></li>
-                </ul>
-            </nav>
+            <?php include 'nav.php'; ?>
 
             <main>
 
