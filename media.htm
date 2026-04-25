@@ -42,21 +42,12 @@
                     <ol class="media-demo">
                         <li>
                             <strong>Audio</strong>
-                            <p class="media-note">This section will include a personally-created MP3 audio file stored in the <code>media/</code> folder.</p>
-                            <div class="audio-slot" role="group" aria-label="Placeholder for audio player">
-                                <div class="audio-slot__inner">
-                                    <strong>Audio Placeholder</strong><br>
-                                    MP3 file will be added later.
-                                </div>
-                            </div>
-                            <p class="media-placeholder-note">Placeholder: This placeholder will be replaced with my embedded audio player and MP3 download link.</p>
-                            <!-- Final expected markup:
-                            <audio controls>
-                              <source src="media/your-audio.mp3" type="audio/mpeg">
-                              Your browser does not support the audio element.
+                            <p class="media-note">A personally-created welcome message recorded as an MP3 audio file.</p>
+                            <audio controls preload="metadata">
+                                <source src="media/audio/welcome.mp3" type="audio/mpeg">
+                                Your browser does not support the HTML5 audio element.
                             </audio>
-                            <p><a href="media/your-audio.mp3" download>Download audio</a></p>
-                            -->
+                            <p class="media-note"><em>To activate this player, upload your recorded MP3 to <code>media/audio/welcome.mp3</code>.</em></p>
                             <p><a class="back-to-top" href="#top">Back to top</a></p>
                         </li>
                         <li>
