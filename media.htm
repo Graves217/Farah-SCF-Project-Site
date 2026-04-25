@@ -126,12 +126,15 @@
                         </li>
                         <li>
                             <strong>z-index Stacked Images</strong>
-                            <p class="media-note">This section will demonstrate layered images using CSS positioning and z-index values for overlap effects.</p>
-                            <div class="z-stack" aria-label="z-index stacking placeholder demo">
-                                <div class="z-stack__layer z-stack__layer--back">Back Layer (z-index: 1)</div>
-                                <div class="z-stack__layer z-stack__layer--front">Front Layer (z-index: 2)</div>
+                            <p class="media-note">Two PC-build photos stacked in an angled "photo pile" using CSS <code>position</code> and <code>z-index</code> — the front image sits visibly on top of the back image with obvious overlap.</p>
+                            <div class="photo-pile" aria-label="Angled photo pile: two stacked PC-build images">
+                                <img class="photo-pile__img photo-pile__img--back"
+                                     src="images/carousel/AnthonyPCBuild.JPEG"
+                                     alt="Anthony's PC build – back layer">
+                                <img class="photo-pile__img photo-pile__img--front"
+                                     src="images/carousel/AlisonPCBuild.JPEG"
+                                     alt="Alison's PC build – front layer">
                             </div>
-                            <p class="media-placeholder-note">Placeholder: This placeholder will be replaced with my final stacked image composition using position and z-index.</p>
                             <p><a class="back-to-top" href="#top">Back to top</a></p>
                         </li>
                         <li>
