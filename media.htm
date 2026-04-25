@@ -144,14 +144,38 @@
                         </li>
                         <li>
                             <strong>RSS Feed</strong>
-                            <p class="media-note">A live tech news feed embedded directly on this page — articles are fetched from the WIRED RSS feed and rendered without a page reload.</p>
+                            <p class="media-note">The WIRED homepage is embedded below. If your browser or the site's security policy blocks the embed, the page automatically falls back to a live list of articles from the WIRED RSS feed.</p>
                             <p class="rss-feed-label">Tech News RSS Feed (Source: WIRED)</p>
                             <!-- RSS Feed Widget – JavaScript embed (Rubric Item #7)
-                                 Fetches https://www.wired.com/feed/rss via the rss2json API
-                                 and renders article titles, dates, and summaries directly on the
-                                 page using scripts/media-rss.js. -->
+                                 First attempts to embed the WIRED homepage in an iframe.
+                                 If the iframe is blocked (X-Frame-Options / CSP frame-ancestors),
+                                 falls back to fetching https://www.wired.com/feed/rss via a
+                                 CORS-friendly proxy and rendering the article list client-side.
+                                 No API key required. Implemented in scripts/media-rss.js. -->
                             <div class="rss-widget-wrap" id="rss-feed-container">
-                                <p class="rss-loading">Loading WIRED tech news&hellip;</p>
+
+                                <!-- Primary: WIRED homepage iframe embed -->
+                                <div class="wired-embed" id="wired-embed">
+                                    <iframe
+                                        class="wired-embed__iframe"
+                                        id="wired-iframe"
+                                        src="https://www.wired.com/"
+                                        title="WIRED homepage"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                    <p class="wired-embed__links">
+                                        <a href="https://www.wired.com/" target="_blank" rel="noopener noreferrer">Visit WIRED</a>
+                                        &middot;
+                                        <a href="https://www.wired.com/feed/rss" target="_blank" rel="noopener noreferrer">RSS Feed</a>
+                                    </p>
+                                </div>
+
+                                <!-- Fallback: live RSS article list (shown if iframe is blocked) -->
+                                <div class="rss-fallback" id="rss-fallback" hidden>
+                                    <p class="rss-loading">Loading WIRED stories&hellip;</p>
+                                </div>
+
                             </div>
                             <p><a class="back-to-top" href="#top">Back to top</a></p>
                         </li>
