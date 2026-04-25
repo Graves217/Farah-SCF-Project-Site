@@ -19,6 +19,8 @@
 
             <main>
 
+                <p class="today-date">Today's Date: <?php echo date('m-d-Y'); ?></p>
+
                 <hr>
 
                 <section id="about">
@@ -37,7 +39,7 @@
                     <map name="profile-hotspot">
                         <area shape="circle"
                               coords="90,95,55"
-                              href="contact.htm"
+                              href="contact.php"
                               alt="Go to Contact page">
                     </map>
 
@@ -94,7 +96,7 @@
 
                         <!-- RESUME LINK -->
                         Resume:
-                        <a href="resume.htm">Resume Page</a>
+                        <a href="resume.php">Resume Page</a>
                     </p>
 
                 </section>

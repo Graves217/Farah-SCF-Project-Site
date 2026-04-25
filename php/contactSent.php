@@ -32,8 +32,8 @@
                     </p>
 
                     <p>
-                        <a href="index.html">Return to Home</a> &nbsp;|&nbsp;
-                        <a href="contact.htm">Submit Another Message</a>
+                        <a href="index.php">Return to Home</a> &nbsp;|&nbsp;
+                        <a href="contact.php">Submit Another Message</a>
                     </p>
 
                 </section>

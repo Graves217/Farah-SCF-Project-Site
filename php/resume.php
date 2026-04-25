@@ -128,7 +128,7 @@
                 <hr>
 
                 <p class="resume-footnote">
-                    View my academic record: <a href="transcript.htm">Transcript &amp; References</a>
+                    View my academic record: <a href="transcript.php">Transcript &amp; References</a>
                 </p>
 
             </main>

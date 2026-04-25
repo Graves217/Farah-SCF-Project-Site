@@ -102,7 +102,7 @@ if (!empty($errors)) {
 
 // ── Build the email body ──────────────────────────────────────────────────────
 $message_lines = [
-    "Contact Form Submission from contact.htm",
+    "Contact Form Submission from contact.php",
     str_repeat('-', 40),
     "Nature of Contact : {$NatureOfContact}",
     "Prefix            : {$Prefix}",
