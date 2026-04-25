@@ -1,13 +1,16 @@
 (function () {
     'use strict';
 
-    var FEED_URL      = 'https://www.wired.com/feed/rss';
-    var API_URL       = 'https://api.rss2json.com/v1/api.json?rss_url=' +
-                        encodeURIComponent(FEED_URL) + '&count=8';
-    var MAX_DESC_LEN  = 160;
+    var FEED_URL     = 'https://www.wired.com/feed/rss';
+    var MAX_ITEMS    = 8;
+    var MAX_DESC_LEN = 160;
 
     var container = document.getElementById('rss-feed-container');
     if (!container) { return; }
+
+    // Fetch the raw RSS XML via a CORS-friendly proxy so GitHub Pages can
+    // render a live list of stories without requiring an API key.
+    var PROXY_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(FEED_URL);
 
     function stripHtml(html) {
         try {
@@ -18,50 +21,65 @@
         }
     }
 
-    fetch(API_URL)
+    function formatDate(dateStr) {
+        var d = new Date(dateStr);
+        if (isNaN(d.getTime())) { return ''; }
+        return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+
+    fetch(PROXY_URL, { cache: 'no-store' })
         .then(function (response) {
-            if (!response.ok) { throw new Error('Network error'); }
-            return response.json();
+            if (!response.ok) { throw new Error('Network error ' + response.status); }
+            return response.text();
         })
-        .then(function (data) {
-            if (data.status !== 'ok' || !data.items || !data.items.length) {
-                showError(container);
-                return;
+        .then(function (xmlText) {
+            var xml = new DOMParser().parseFromString(xmlText, 'text/xml');
+
+            if (xml.getElementsByTagName('parsererror').length) {
+                throw new Error('RSS parse error');
             }
+
+            var items = Array.prototype.slice.call(xml.getElementsByTagName('item'), 0, MAX_ITEMS);
+            if (!items.length) { throw new Error('No RSS items found'); }
 
             var list = document.createElement('ul');
             list.className = 'rss-list';
 
-            data.items.forEach(function (item) {
+            items.forEach(function (item) {
+                var titleEl = item.getElementsByTagName('title')[0];
+                var linkEl  = item.getElementsByTagName('link')[0];
+                var dateEl  = item.getElementsByTagName('pubDate')[0];
+                var descEl  = item.getElementsByTagName('description')[0];
+
+                var title = titleEl ? titleEl.textContent.trim() : '(no title)';
+                var link  = linkEl  ? linkEl.textContent.trim()  : FEED_URL;
+                var date  = dateEl  ? formatDate(dateEl.textContent.trim()) : '';
+                var desc  = descEl  ? stripHtml(descEl.textContent || '').trim() : '';
+
                 var li = document.createElement('li');
                 li.className = 'rss-item';
 
                 var a = document.createElement('a');
                 a.className = 'rss-item__title';
-                a.href = item.link || '#';
+                a.href = link;
                 a.target = '_blank';
                 a.rel = 'noopener noreferrer';
-                a.textContent = item.title || '(no title)';
+                a.textContent = title;
                 li.appendChild(a);
 
-                if (item.pubDate) {
-                    var dateStr = new Date(item.pubDate).toLocaleDateString(
-                        undefined,
-                        { year: 'numeric', month: 'short', day: 'numeric' }
-                    );
+                if (date) {
                     var span = document.createElement('span');
                     span.className = 'rss-item__date';
-                    span.textContent = dateStr;
+                    span.textContent = date;
                     li.appendChild(span);
                 }
 
-                var rawDesc = stripHtml(item.description || '').trim();
-                if (rawDesc) {
+                if (desc) {
                     var p = document.createElement('p');
                     p.className = 'rss-item__desc';
-                    p.textContent = rawDesc.length > MAX_DESC_LEN
-                        ? rawDesc.substring(0, MAX_DESC_LEN) + '\u2026'
-                        : rawDesc;
+                    p.textContent = desc.length > MAX_DESC_LEN
+                        ? desc.substring(0, MAX_DESC_LEN) + '\u2026'
+                        : desc;
                     li.appendChild(p);
                 }
 
@@ -70,6 +88,11 @@
 
             container.innerHTML = '';
             container.appendChild(list);
+
+            var cite = document.createElement('p');
+            cite.className = 'rss-citation';
+            cite.innerHTML = 'Source: <a href="' + FEED_URL + '" target="_blank" rel="noopener noreferrer">' + FEED_URL + '</a>';
+            container.appendChild(cite);
         })
         .catch(function () {
             showError(container);
@@ -79,14 +102,14 @@
         el.innerHTML = '';
         var p = document.createElement('p');
         p.className = 'rss-error';
-        p.textContent = 'Unable to load feed. ';
+        p.textContent = 'Unable to load WIRED RSS feed right now. ';
         var a = document.createElement('a');
-        a.href = 'https://www.wired.com';
+        a.href = FEED_URL;
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
-        a.textContent = 'Visit WIRED';
+        a.textContent = 'Open the RSS feed';
         p.appendChild(a);
-        p.appendChild(document.createTextNode(' directly.'));
+        p.appendChild(document.createTextNode('.'));
         el.appendChild(p);
     }
 }());
