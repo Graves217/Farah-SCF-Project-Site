@@ -562,9 +562,7 @@
                 Facebook | Twitter | YouTube
             </div> <!-- close social -->
 
-            <footer>
-                &copy; 2026 Farah | Professional Portfolio | farah-scf-project.com
-            </footer>
+            <?php include("footer.php"); ?>
 
         </div> <!-- close wrapper -->
 

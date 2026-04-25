@@ -125,24 +125,7 @@
                 Facebook | Twitter | YouTube
             </div> <!-- close social -->
 
-            <footer>
-                &copy; 2026 Farah | Professional Portfolio | farah-scf-project.com
-                <script type="text/javascript">
-                /* document.write Last Updated (Rubric Item #4)
-                 * Reads document.lastModified and writes the date below the footer text.
-                 * Uses the "last-updated" CSS class from farah-scf.css for consistent
-                 * styling across all pages (smaller font, visually separated). */
-                var lastMod  = new Date(document.lastModified);
-                var modMonth = lastMod.getMonth() + 1;
-                var modDate  = lastMod.getDate();
-                var modYear  = lastMod.getFullYear();
-                document.write(
-                    "<p class='last-updated'>Last Updated: " +
-                    modMonth + "/" + modDate + "/" + modYear +
-                    "</p>"
-                );
-                </script>
-            </footer>
+            <?php include("footer.php"); ?>
 
         </div> <!-- close wrapper -->
 
