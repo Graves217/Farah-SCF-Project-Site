@@ -306,6 +306,18 @@ section h2 {
     width: min(600px, 100%);
 }
 
+/* Center the live video player on media.htm (Media item #2) */
+.media-video {
+    max-width: 900px;
+    margin: 8px auto;
+}
+
+.media-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .video-slot {
     width: 100%;
     max-width: 1200px;
