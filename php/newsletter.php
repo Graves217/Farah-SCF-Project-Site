@@ -13,9 +13,7 @@
 
         <div id="wrapper"> <!-- open wrapper -->
 
-            <header>
-                <h1>Academic &amp; Professional Updates</h1>
-            </header>
+            <?php include("header.php"); ?>
 
             <?php include 'nav.php'; ?>
 

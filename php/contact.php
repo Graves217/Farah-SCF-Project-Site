@@ -13,9 +13,7 @@
 
         <div id="wrapper"> <!-- open wrapper -->
 
-            <header>
-                <h1>Contact Me</h1>
-            </header>
+            <?php include("header.php"); ?>
 
             <?php include 'nav.php'; ?>
 

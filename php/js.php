@@ -110,9 +110,7 @@
 
         <div id="wrapper"> <!-- open wrapper -->
 
-            <header>
-                <h1>JavaScript Demonstrations</h1>
-            </header>
+            <?php include("header.php"); ?>
 
             <?php include 'nav.php'; ?>
 
