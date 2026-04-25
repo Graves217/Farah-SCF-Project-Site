@@ -139,20 +139,14 @@
                         </li>
                         <li>
                             <strong>RSS Feed</strong>
-                            <p class="media-note">A live tech news feed embedded directly on this page via a FeedWind RSS widget — no link-out required.</p>
+                            <p class="media-note">A live tech news feed embedded directly on this page — articles are fetched from the WIRED RSS feed and rendered without a page reload.</p>
                             <p class="rss-feed-label">Tech News RSS Feed (Source: WIRED)</p>
-                            <!-- FeedWind RSS Widget – iframe embed (Rubric Item #7)
-                                 Feed URL used to configure the widget: https://www.wired.com/feed/rss
-                                 To reconfigure: visit https://feed.mikle.com/, create a free widget
-                                 using the WIRED feed URL above, then replace the fpid value in the
-                                 iframe src with your assigned widget ID. -->
-                            <div class="rss-widget-wrap">
-                                <iframe
-                                    class="rss-widget-iframe"
-                                    src="https://feed.mikle.com/widget/v2/175563/"
-                                    scrolling="yes"
-                                    title="Tech News RSS Feed – WIRED">
-                                </iframe>
+                            <!-- RSS Feed Widget – JavaScript embed (Rubric Item #7)
+                                 Fetches https://www.wired.com/feed/rss via the rss2json API
+                                 and renders article titles, dates, and summaries directly on the
+                                 page using scripts/media-rss.js. -->
+                            <div class="rss-widget-wrap" id="rss-feed-container">
+                                <p class="rss-loading">Loading WIRED tech news&hellip;</p>
                             </div>
                             <p><a class="back-to-top" href="#top">Back to top</a></p>
                         </li>
@@ -206,6 +200,7 @@
         </div> <!-- close wrapper -->
 
         <script src="media-carousel.js"></script>
+        <script src="scripts/media-rss.js"></script>
 
     </body>
 </html>
