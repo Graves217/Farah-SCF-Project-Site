@@ -15,11 +15,11 @@
 
             <?php include("header.php"); ?>
 
-            <?php include 'nav.php'; ?>
+            <?php include("nav.php"); ?>
 
             <main>
 
-                <p>Today's Date: <?php echo date("m-d-y"); ?></p>
+                <p>Today's Date: <?php echo date("m-d-Y"); ?></p>
 
                 <hr>
 
