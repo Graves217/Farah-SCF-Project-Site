@@ -19,7 +19,7 @@
 
             <main>
 
-                <p class="today-date">Today's Date: <?php echo date('m-d-Y'); ?></p>
+                <p>Today's Date: <?php echo date("m-d-y"); ?></p>
 
                 <hr>
 
